@@ -2,302 +2,207 @@
 
 import { ThemeProvider } from "@/providers/themeProvider/ThemeProvider";
 import NavbarStyleMinimal from '@/components/navbar/NavbarStyleMinimal';
-import HeroBillboardScroll from '@/components/sections/hero/HeroBillboardScroll';
-import AboutFeature from '@/components/sections/about/AboutFeature';
-import FeatureCardFive from '@/components/sections/feature/FeatureCardFive';
-import PricingCardOne from '@/components/sections/pricing/PricingCardOne';
-import MetricCardOne from '@/components/sections/metrics/MetricCardOne';
-import TestimonialCardOne from '@/components/sections/testimonial/TestimonialCardOne';
-import FaqSplitText from '@/components/sections/faq/FaqSplitText';
+import HeroBillboard from '@/components/sections/hero/HeroBillboard';
+import FeatureCardSix from '@/components/sections/feature/FeatureCardSix';
+import TestimonialCardThree from '@/components/sections/testimonial/TestimonialCardThree';
+import SocialProofOne from '@/components/sections/socialProof/SocialProofOne';
+import FaqDouble from '@/components/sections/faq/FaqDouble';
 import ContactSplit from '@/components/sections/contact/ContactSplit';
-import FooterBase from '@/components/sections/footer/FooterBase';
-import { BarChart3, CheckCircle, Crown, DollarSign, Lock, Plug, Quote, Rocket, Shield, Sparkles, Star, TrendingUp, Users, Workflow, Zap } from "lucide-react";
+import FooterSocial from '@/components/sections/footer/FooterSocial';
+import { Building, HelpCircle, MessageSquare, Rocket, Sparkles } from "lucide-react";
 
 export default function Home() {
   return (
     <ThemeProvider
-      defaultButtonVariant="icon-arrow"
+      defaultButtonVariant="hover-bubble"
       defaultTextAnimation="reveal-blur"
-      borderRadius="soft"
-      contentWidth="medium"
+      borderRadius="rounded"
+      contentWidth="large"
       sizing="small"
-      background="circleGradient"
-      cardStyle="glass-flat"
+      background="aurora"
+      cardStyle="layered-gradient"
       primaryButtonStyle="gradient"
-      secondaryButtonStyle="outline"
+      secondaryButtonStyle="solid"
       showBlurBottom={false}
     >
       <div id="nav" data-section="nav">
         <NavbarStyleMinimal
-          logoSrc="https://pixabay.com/get/gf8ef6f56aa7d13011d3c9e416bd9594d71254a31e96bea161e1ae36d6cf46ea0c29b5ee907fa07623918eef53a9a7a23d6145e1f8c739d2ebe761210cddca53b_1280.jpg"
-          logoAlt="SaaS Platform Logo"
-          brandName="SaasPro"
+          brandName="SaasFlow"
           button={{
             text: "Get Started",
-            href: "pricing"
+            href: "contact"
           }}
         />
       </div>
       
       <div id="hero" data-section="hero">
-        <HeroBillboardScroll
-          title="Transform Your Business with Intelligent SaaS Solutions"
-          description="Streamline operations, boost productivity, and scale your business with our comprehensive platform designed for modern enterprises"
-          tag="Next-Gen Platform"
+        <HeroBillboard
+          title="Transform Your Business with Smart SaaS Solutions"
+          description="Streamline operations, boost productivity, and accelerate growth with our comprehensive business platform designed for modern enterprises"
+          tag="SaaS Platform"
           tagIcon={Rocket}
           buttons={[
             {
               text: "Start Free Trial",
-              href: "pricing"
+              href: "contact"
             },
             {
               text: "Watch Demo",
-              href: "about"
+              href: "https://demo.saasflow.com"
             }
           ]}
-          imageSrc="https://pixabay.com/get/g588f1a70d3c9822be21da2042db02f0dd417e946747fedba80253e982f49178dfe7c86f0a47bfd80a3f34420d94bfa1ba0e72dd35dd818fdf639478ed302fdfa_1280.jpg"
-          imageAlt="SaaS platform dashboard interface"
+          imageSrc="https://pixabay.com/get/g72fdf4c16149cc16c216162710e922510a7d149a2ff21e78edd289e2f826a40e54025b43bcf3f890ae34309cded09e179b92eb9fa00fbde2b4ebc1af4a4c6725_1280.jpg"
+          imageAlt="SaasFlow dashboard interface"
+          frameStyle="browser"
         />
       </div>
       
-      <div id="about" data-section="about">
-        <AboutFeature
-          title="We empower businesses to achieve more with intelligent automation, seamless integrations, and data-driven insights that transform how you work and grow."
-          features={[
-            {
-              icon: Zap,
-              title: "Lightning Fast",
-              description: "Experience blazing fast performance with our optimized infrastructure that scales with your business needs."
-            },
-            {
-              icon: Shield,
-              title: "Enterprise Security",
-              description: "Bank-level security protocols protect your data with advanced encryption and compliance standards."
-            },
-            {
-              icon: Users,
-              title: "Team Collaboration",
-              description: "Seamless collaboration tools that keep your team connected and productive across all projects."
-            },
-            {
-              icon: TrendingUp,
-              title: "Smart Analytics",
-              description: "Powerful insights and reporting tools that help you make data-driven decisions for growth."
-            }
-          ]}
-        />
-      </div>
-      
-      <div id="feature" data-section="feature">
-        <FeatureCardFive
-          title="Powerful Features"
-          description="Everything you need to run your business efficiently and effectively"
+      <div id="features" data-section="features">
+        <FeatureCardSix
+          title="Everything You Need to Scale Your Business"
+          description="From analytics to automation, discover how our platform transforms the way you work"
           tag="Features"
-          tagIcon={Star}
+          tagIcon={Sparkles}
+          textboxLayout="default"
           features={[
             {
+              id: 1,
               title: "Advanced Analytics",
-              icon: BarChart3
+              description: "Get deep insights into your business performance with real-time analytics, custom dashboards, and automated reporting that helps you make data-driven decisions",
+              imageSrc: "https://pixabay.com/get/gaf1e7aca22dbcd42f6ab2a1fa466df10c927580ac83664b8dedd45d4ee3facc53586d525ac0f425f0e9abab278c8d65ab5b738e6019caff556bf5e4de772ef6a_1280.jpg",
+              imageAlt: "Advanced analytics dashboard"
             },
             {
+              id: 2,
               title: "Workflow Automation",
-              icon: Workflow
+              description: "Automate repetitive tasks and streamline your processes with powerful workflow builders, smart triggers, and seamless integrations across your tech stack",
+              imageSrc: "https://pixabay.com/get/g43576ed05df3f9dfdf6421cdef099f05e5514cf4243ae543916d453727de096e2997e77c782472deb6f83b3f2d48faac0d29365a5598fc7ed3a8904a9c638229_1280.jpg",
+              imageAlt: "Workflow automation interface"
             },
             {
-              title: "API Integration",
-              icon: Plug
-            },
-            {
-              title: "Data Security",
-              icon: Lock
-            },
-            {
+              id: 3,
               title: "Team Collaboration",
-              icon: Users
+              description: "Enhance teamwork with shared workspaces, real-time collaboration tools, project management features, and communication channels that keep everyone aligned",
+              imageSrc: "https://pixabay.com/get/gfcd7f1964f4ab13e405515ac29372b23d24c1026f65e4321993ddc5718695435edd040527ee53933cc351d253d0852d120b3b8cc6b5f1bff7d2a73973b3f333b_1280.jpg",
+              imageAlt: "Team collaboration workspace"
+            },
+            {
+              id: 4,
+              title: "Enterprise Security",
+              description: "Protect your data with bank-grade security, multi-factor authentication, role-based access controls, and compliance with industry standards like SOC 2 and GDPR",
+              imageSrc: "https://pixabay.com/get/g5cfd7f80abdeaa501bbfccb518f40b9b5501b394e283e58d79061a9197fd72862dab8b453650b6529fc8a2568ca6e03ef3f859a99c403ed6c6d1b3d58de45cf5_1280.jpg",
+              imageAlt: "Enterprise security features"
             }
           ]}
-          gridVariant="uniform-all-items-equal"
+        />
+      </div>
+      
+      <div id="testimonials" data-section="testimonials">
+        <TestimonialCardThree
+          title="Trusted by Industry Leaders"
+          description="See what our customers have to say about their experience with SaasFlow"
+          tag="Testimonials"
+          tagIcon={MessageSquare}
           textboxLayout="default"
           animationType="slide-up"
-          showIconBoxBackground={true}
-        />
-      </div>
-      
-      <div id="pricing" data-section="pricing">
-        <PricingCardOne
-          title="Choose Your Plan"
-          description="Flexible pricing options that grow with your business needs"
-          tag="Pricing"
-          tagIcon={DollarSign}
-          plans={[
-            {
-              id: "starter",
-              badge: "Perfect for Teams",
-              badgeIcon: Users,
-              price: "$29/month",
-              subtitle: "Everything you need to get started",
-              features: [
-                "Up to 10 team members",
-                "50GB storage",
-                "Basic analytics",
-                "Email support",
-                "Standard integrations"
-              ]
-            },
-            {
-              id: "professional",
-              badge: "Most Popular",
-              badgeIcon: Sparkles,
-              price: "$79/month",
-              subtitle: "Advanced features for growing businesses",
-              features: [
-                "Up to 50 team members",
-                "500GB storage",
-                "Advanced analytics",
-                "Priority support",
-                "Premium integrations",
-                "Custom workflows"
-              ]
-            },
-            {
-              id: "enterprise",
-              badge: "Full Power",
-              badgeIcon: Crown,
-              price: "$199/month",
-              subtitle: "Complete solution for large organizations",
-              features: [
-                "Unlimited team members",
-                "Unlimited storage",
-                "Enterprise analytics",
-                "24/7 dedicated support",
-                "All integrations",
-                "Custom development"
-              ]
-            }
-          ]}
-          textboxLayout="default"
-          animationType="scale-rotate"
-        />
-      </div>
-      
-      <div id="metric" data-section="metric">
-        <MetricCardOne
-          title="Trusted by Thousands"
-          description="See the impact our platform makes for businesses worldwide"
-          tag="Growth"
-          tagIcon={TrendingUp}
-          metrics={[
-            {
-              id: "1",
-              value: "50K+",
-              title: "Active Users",
-              description: "Professionals trust our platform daily",
-              icon: Users
-            },
-            {
-              id: "2",
-              value: "99.9%",
-              title: "Uptime",
-              description: "Reliable service you can count on",
-              icon: CheckCircle
-            },
-            {
-              id: "3",
-              value: "150+",
-              title: "Integrations",
-              description: "Connect with your favorite tools",
-              icon: Plug
-            }
-          ]}
-          gridVariant="uniform-all-items-equal"
-          textboxLayout="default"
-          animationType="blur-reveal"
-        />
-      </div>
-      
-      <div id="testimonial" data-section="testimonial">
-        <TestimonialCardOne
-          title="What Our Customers Say"
-          description="Real feedback from businesses that trust our platform"
-          tag="Testimonials"
-          tagIcon={Quote}
           testimonials={[
             {
               id: "1",
               name: "Sarah Johnson",
-              role: "CEO",
-              company: "TechFlow Inc",
-              rating: 5,
-              imageSrc: "https://pixabay.com/get/g119b45b5af9b6296c41590738fae9e1352807f473c3cbde27afc3ad27249caa2d26449c6dce99a0205a6e71392d6d3698f1f303188817eb7c1079e23065e566e_1280.jpg",
+              handle: "@sarahj_ceo",
+              testimonial: "SaasFlow has transformed how we operate. The automation features alone have saved us 30+ hours per week, and the analytics give us insights we never had before.",
+              imageSrc: "https://pixabay.com/get/gd4d97f87a06b9fe444b182d2a10277c2ecb681be8e067651b2f1ccf8c125f26de089cc612ea2b6cd0b2fa63dac9287d4d6587e35002284b19d7b654a7c3afb00_1280.jpg",
               imageAlt: "Sarah Johnson CEO portrait"
             },
             {
               id: "2",
-              name: "Michael Chen",
-              role: "CTO",
-              company: "DataStream",
-              rating: 5,
-              imageSrc: "https://pixabay.com/get/gc32fa3ea6723628ce3bb69be975b0efa6533e74a60c58f9595f17b712354081d957a46a8d073616341cfbdbd16ec74edd07ea40e366906c6adb336607218d730_1280.jpg",
-              imageAlt: "Michael Chen CTO headshot"
+              name: "Mike Chen",
+              handle: "@mike_tech",
+              testimonial: "Implementation was seamless and the ROI was immediate. Our team productivity increased by 40% in the first quarter after switching to SaasFlow.",
+              imageSrc: "https://pixabay.com/get/ge86685b0961092c497e42962dc10834b96428b095d8629c5ac021bc3a89c4a85c6cb85df7fa059cef3c256c5bb78cb870c585c27d2bd0122f110391b66ca0053_1280.jpg",
+              imageAlt: "Mike Chen CTO portrait"
             },
             {
               id: "3",
-              name: "Emily Rodriguez",
-              role: "Marketing Director",
-              company: "GrowthLab",
-              rating: 5,
-              imageSrc: "https://pixabay.com/get/g310bb00345632c5ae7bdb453e2916b60f6744e1ea95c120ed119e427be76c40e8095c4425d9073f4106ec0078c2ce3d094393ac2fbffbc1517262df596f21af2_1280.jpg",
-              imageAlt: "Emily Rodriguez marketing director"
+              name: "Emma Rodriguez",
+              handle: "@emma_ops",
+              testimonial: "The customer support is exceptional. Whenever we need help, the team is responsive and knowledgeable. It feels like having an extended team.",
+              imageSrc: "https://pixabay.com/get/g97dbd8a58c6b05a9aad252a7acd977c26c07bd7190f252b49cc66710a16f0238f88057186bdf31fff969944adef1b4cd5bc927594843fd96e94986d755b9ef5c_1280.jpg",
+              imageAlt: "Emma Rodriguez manager portrait"
             },
             {
               id: "4",
               name: "David Kim",
-              role: "Product Manager",
-              company: "InnovateX",
-              rating: 5,
-              imageSrc: "https://pixabay.com/get/g85672b11042043aa830753e7cc79c8828934fe57b3cd777762f1cc051196576d5769ffa958f301970a9ff1cd9ee13f46b3fe44a20078c3f198b75e660014e19c_1280.jpg",
-              imageAlt: "David Kim product manager"
+              handle: "@davidk_director",
+              testimonial: "Security was our top concern when evaluating platforms. SaasFlow exceeded our expectations with enterprise-grade protection and compliance features.",
+              imageSrc: "https://pixabay.com/get/g0eeaf93238804cd369e87f460cc1cbb2cc5d6c8361468855c16242fe738583204b13971ec2d11b4b19cf9104033238e65c934aaeb8898452638e2c137d626aaf_1280.jpg",
+              imageAlt: "David Kim director portrait"
             }
           ]}
-          gridVariant="uniform-all-items-equal"
+        />
+      </div>
+      
+      <div id="social-proof" data-section="social-proof">
+        <SocialProofOne
+          title="Trusted by 10,000+ Companies Worldwide"
+          description="Join industry leaders who rely on SaasFlow to power their operations"
+          tag="Partners"
+          tagIcon={Building}
           textboxLayout="default"
-          animationType="opacity"
+          logos={[
+            "https://pixabay.com/get/g1a0ad7820db759a45d564cf8886f6a9612935f9e521f400692823ca30e478a84d4fb947884bb79c23f9a0c4bf4ea83310a9b8717597211d8e04f4ab9c9f70d89_1280.jpg",
+            "https://pixabay.com/get/gd0a33c80e155d6f05207bfd2b59c8909dad89a1d8d6542bc78d2b2ab52ad1cd0484af47da5305bed92553d9f5ecb2c22e73f89ba584412c151fe7cabbb95d982_1280.jpg",
+            "https://pixabay.com/get/gc49ffb8c0bdf652d4f7cf039ccbed94bfe0c223c93acd7e2f8c158d71f9deec9226135ad11ff1040dfda09fb59596be13eb36e983e70ae160aaf2b188d334bce_1280.jpg",
+            "https://pixabay.com/get/gc459bea81fa73379af87c5a22ab2bf0440a000ca41d304925f104e885dac78b9025850fda04c44339e239ce2909bd6cc4306155d35d1c11c7d176da5bbb4b264_1280.jpg",
+            "https://pixabay.com/get/g06186096c3e033847d13dabc9b3f0e91d99a4056d77f7144c413941ca6068e58353137d18328e7c73092387ac8345778eaa250ccbd853042ab20e62224beac39_1280.jpg",
+            "https://pixabay.com/get/gedde34e55e47ca9cc611d331c851f72847976eecb64f1dc37306468480734f1fa6c40a2ee8ca03bd05a744924b12d10137ecf3defe9e6bfccc03508ac03a673f_1280.jpg",
+            "https://pixabay.com/get/g027a5398e7cf86568730be8c3ad65133cc6c2e8e8911f797792959b1e7f58f5934d9e6a1e224da44d7e871ad68e0723c569e0b4c5b3c56d58ba5685ba179958b_1280.jpg"
+          ]}
+          speed={35}
+          showCard={true}
         />
       </div>
       
       <div id="faq" data-section="faq">
-        <FaqSplitText
-          sideTitle="Frequently Asked Questions"
-          sideDescription="Everything you need to know about our platform"
+        <FaqDouble
+          title="Frequently Asked Questions"
+          description="Everything you need to know about SaasFlow and our services"
+          tag="Support"
+          tagIcon={HelpCircle}
+          textboxLayout="default"
+          animationType="smooth"
           faqs={[
             {
               id: "1",
-              title: "How quickly can I get started?",
-              content: "You can get started immediately with our free trial. Simply sign up and you'll have access to all features for 14 days."
+              title: "What is SaasFlow and how does it work?",
+              content: "SaasFlow is a comprehensive business platform that streamlines operations through automation, analytics, and collaboration tools. It integrates with your existing systems to provide a unified workspace for your team."
             },
             {
               id: "2",
-              title: "What integrations are available?",
-              content: "We offer 150+ integrations with popular tools including Slack, Salesforce, Google Workspace, Microsoft 365, and many more."
+              title: "How long does implementation take?",
+              content: "Most businesses are up and running within 24-48 hours. Our onboarding team provides guided setup, data migration assistance, and training to ensure a smooth transition."
             },
             {
               id: "3",
-              title: "Is my data secure?",
-              content: "Yes, we use bank-level encryption and comply with SOC 2, GDPR, and other security standards to keep your data safe."
+              title: "Is my data secure with SaasFlow?",
+              content: "Absolutely. We use bank-grade encryption, maintain SOC 2 compliance, and follow GDPR standards. Your data is backed up multiple times daily and stored in secure, geographically distributed data centers."
             },
             {
               id: "4",
-              title: "Can I change plans anytime?",
-              content: "Absolutely! You can upgrade or downgrade your plan at any time. Changes take effect immediately with prorated billing."
+              title: "Can I integrate with my existing tools?",
+              content: "Yes, SaasFlow integrates with 500+ popular business tools including Slack, Salesforce, HubSpot, Google Workspace, Microsoft 365, and many more through our API and native integrations."
             },
             {
               id: "5",
-              title: "Do you offer custom solutions?",
-              content: "Yes, our Enterprise plan includes custom development and dedicated support to meet your specific business needs."
+              title: "What support options are available?",
+              content: "We offer 24/7 chat support, email support, phone support for enterprise customers, comprehensive documentation, video tutorials, and personalized onboarding sessions."
+            },
+            {
+              id: "6",
+              title: "Can I try SaasFlow before committing?",
+              content: "Absolutely! We offer a 14-day free trial with full access to all features. No credit card required. You can also schedule a personalized demo with our team to see how SaasFlow fits your specific needs."
             }
           ]}
-          textPosition="left"
-          animationType="smooth"
         />
       </div>
       
@@ -305,37 +210,40 @@ export default function Home() {
         <ContactSplit
           tag="Get Started"
           title="Ready to Transform Your Business?"
-          description="Join thousands of companies already using our platform to streamline operations and drive growth. Start your free trial today."
+          description="Join thousands of companies using SaasFlow to streamline operations and accelerate growth. Start your free trial today."
           tagIcon={Rocket}
-          imageSrc="https://pixabay.com/get/ge1fcb9a989284fec064e573a944c0e9ecb7aea206e201ae9440f83ac81df7558306c38a87817accc4d1bf9c4aabb6ae066da4804ec6e0541ecd6e9a6f5bbd429_1280.jpg"
-          imageAlt="Customer support team"
-          mediaPosition="right"
           inputPlaceholder="Enter your work email"
           buttonText="Start Free Trial"
-          termsText="By starting your trial, you agree to our Terms of Service and Privacy Policy."
+          termsText="By signing up, you agree to our Terms of Service and Privacy Policy. No credit card required for trial."
+          imageSrc="https://pixabay.com/get/g536990ed2011d44555a6891e684bca005ae0aaac69123e3a3947d2f0112fc2e01eca7d3b4c263460b98b7756bef99e4f0bc510011027cca2c8d1e9ba5b4aba14_1280.jpg"
+          imageAlt="Professional business team collaboration"
+          mediaPosition="right"
         />
       </div>
       
       <div id="footer" data-section="footer">
-        <FooterBase
-          logoSrc="https://pixabay.com/get/gf8ef6f56aa7d13011d3c9e416bd9594d71254a31e96bea161e1ae36d6cf46ea0c29b5ee907fa07623918eef53a9a7a23d6145e1f8c739d2ebe761210cddca53b_1280.jpg"
-          logoText="SaasPro"
-          copyrightText="© 2025 | SaasPro"
+        <FooterSocial
+          logoText="SaasFlow"
+          copyrightText="© 2025 SaasFlow, Inc. All rights reserved."
           columns={[
             {
               title: "Product",
               items: [
                 {
                   label: "Features",
-                  href: "feature"
+                  href: "features"
                 },
                 {
                   label: "Pricing",
                   href: "pricing"
                 },
                 {
-                  label: "Integrations",
-                  href: "about"
+                  label: "Security",
+                  href: "security"
+                },
+                {
+                  label: "Enterprise",
+                  href: "enterprise"
                 }
               ]
             },
@@ -347,12 +255,16 @@ export default function Home() {
                   href: "about"
                 },
                 {
-                  label: "Contact",
-                  href: "contact"
+                  label: "Careers",
+                  href: "careers"
                 },
                 {
-                  label: "Support",
-                  href: "faq"
+                  label: "Blog",
+                  href: "blog"
+                },
+                {
+                  label: "Press",
+                  href: "press"
                 }
               ]
             },
@@ -361,17 +273,64 @@ export default function Home() {
               items: [
                 {
                   label: "Documentation",
-                  href: "https://docs.example.com"
+                  href: "docs"
                 },
                 {
                   label: "API Reference",
-                  href: "https://api.example.com"
+                  href: "api"
                 },
                 {
-                  label: "Status",
-                  href: "https://status.example.com"
+                  label: "Help Center",
+                  href: "help"
+                },
+                {
+                  label: "Community",
+                  href: "community"
                 }
               ]
+            },
+            {
+              title: "Legal",
+              items: [
+                {
+                  label: "Privacy Policy",
+                  href: "privacy"
+                },
+                {
+                  label: "Terms of Service",
+                  href: "terms"
+                },
+                {
+                  label: "Cookie Policy",
+                  href: "cookies"
+                },
+                {
+                  label: "GDPR",
+                  href: "gdpr"
+                }
+              ]
+            }
+          ]}
+          socialLinks={[
+            {
+              icon: "Twitter",
+              href: "https://twitter.com/saasflow",
+              ariaLabel: "Follow us on Twitter"
+            },
+            {
+              icon: "Linkedin",
+              href: "https://linkedin.com/company/saasflow",
+              ariaLabel: "Connect on LinkedIn"
+            },
+            {
+              icon: "Github",
+              href: "https://github.com/saasflow",
+              ariaLabel: "View our GitHub"
+            },
+            {
+              icon: "Youtube",
+              href: "https://youtube.com/saasflow",
+              ariaLabel: "Watch on YouTube"
             }
           ]}
         />

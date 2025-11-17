@@ -76,23 +76,33 @@ const nunito = Nunito({
 });
 
 export const metadata: Metadata = {
-  title: "SaasPro - Transform Your Business with Intelligent Solutions",
-  description: "Streamline operations, boost productivity, and scale your business with SaasPro's comprehensive SaaS platform designed for modern enterprises.",
-  keywords: "SaaS platform, business automation, productivity tools, enterprise software, workflow management",
-  robots: {
-    index: true,
-    follow: true
+  title: "SaasFlow - Transform Your Business with Smart SaaS Solutions",
+  description: "Streamline operations, boost productivity, and accelerate growth with SaasFlow's comprehensive business platform. Start your free trial today.",
+  keywords: "saas platform, business automation, workflow management, analytics dashboard, team collaboration, enterprise software",
+  metadataBase: new URL("https://saasflow.com"),
+  alternates: {
+    canonical: "https://saasflow.com"
   },
   openGraph: {
-    title: "SaasPro - Transform Your Business with Intelligent Solutions",
-    description: "Streamline operations and boost productivity with our comprehensive SaaS platform",
-    siteName: "SaasPro",
+    title: "SaasFlow - Smart Business Platform for Modern Enterprises",
+    description: "Transform your business operations with powerful automation, analytics, and collaboration tools. Join 10,000+ companies using SaasFlow.",
+    url: "https://saasflow.com",
+    siteName: "SaasFlow",
+    images: [{
+      url: "https://pixabay.com/get/g72fdf4c16149cc16c216162710e922510a7d149a2ff21e78edd289e2f826a40e54025b43bcf3f890ae34309cded09e179b92eb9fa00fbde2b4ebc1af4a4c6725_1280.jpg",
+      alt: "SaasFlow business dashboard interface"
+    }],
     type: "website"
   },
   twitter: {
     card: "summary_large_image",
-    title: "SaasPro - Transform Your Business",
-    description: "Comprehensive SaaS platform for modern enterprises"
+    title: "SaasFlow - Transform Your Business Operations",
+    description: "Streamline operations and boost productivity with our comprehensive SaaS platform. Start free trial today.",
+    images: ["https://pixabay.com/get/g72fdf4c16149cc16c216162710e922510a7d149a2ff21e78edd289e2f826a40e54025b43bcf3f890ae34309cded09e179b92eb9fa00fbde2b4ebc1af4a4c6725_1280.jpg"]
+  },
+  robots: {
+    index: true,
+    follow: true
   }
 };
 
