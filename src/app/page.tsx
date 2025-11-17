@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { ThemeProvider } from "@/providers/themeProvider/ThemeProvider";
 import NavbarStyleMinimal from '@/components/navbar/NavbarStyleMinimal';
@@ -9,7 +9,7 @@ import SocialProofOne from '@/components/sections/socialProof/SocialProofOne';
 import FaqDouble from '@/components/sections/faq/FaqDouble';
 import ContactSplit from '@/components/sections/contact/ContactSplit';
 import FooterSocial from '@/components/sections/footer/FooterSocial';
-import { Building, HelpCircle, MessageSquare, Rocket, Sparkles } from "lucide-react";
+import { Building, HelpCircle, MessageSquare, Rocket, Sparkles, Twitter, Linkedin, Github, Youtube } from "lucide-react";
 
 export default function Home() {
   return (
@@ -313,22 +313,22 @@ export default function Home() {
           ]}
           socialLinks={[
             {
-              icon: "Twitter",
+              icon: Twitter,
               href: "https://twitter.com/saasflow",
               ariaLabel: "Follow us on Twitter"
             },
             {
-              icon: "Linkedin",
+              icon: Linkedin,
               href: "https://linkedin.com/company/saasflow",
               ariaLabel: "Connect on LinkedIn"
             },
             {
-              icon: "Github",
+              icon: Github,
               href: "https://github.com/saasflow",
               ariaLabel: "View our GitHub"
             },
             {
-              icon: "Youtube",
+              icon: Youtube,
               href: "https://youtube.com/saasflow",
               ariaLabel: "Watch on YouTube"
             }
